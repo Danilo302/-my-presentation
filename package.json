@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "lessc ./src/styles ./build/styles main.less",
-    "start": "vercel dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "lessc src/styles/main.less build/styles/main.css",
+    "start": "vercel dev"
   },
   "author": "",
   "license": "ISC",
