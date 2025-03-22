@@ -12,13 +12,6 @@
         {
             "src": "src/images/*",
             "use": "@vercel/static"
-        },
-        {
-            "src": "src/styles/**/*.less",
-            "use": "@vercel/static-build",
-            "config": {
-                "distDir": "build/styles"
-            }
         }
     ],
     "routes": [

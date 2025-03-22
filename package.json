@@ -4,7 +4,6 @@
   "main": "index.js",
   "scripts": {
     "build": "mkdir -p build/styles && lessc src/styles/main.less build/styles/main.css",
-    "dev": "less-watch-compiler src/styles build/styles",
     "start": "vercel dev"
   },
   "author": "",
