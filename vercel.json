@@ -17,11 +17,11 @@
     "routes": [
         {
             "src": "/styles/(.*)",
-            "dest": "/build/styles/$1"
+            "dest": "/build/styles/*"
         },
         {
             "src": "/images/(.*)",
-            "dest": "/src/images/$1"
+            "dest": "/src/images/*"
         },
         {
             "src": "/(.*)",
