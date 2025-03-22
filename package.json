@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "less": "less-watch-compiler ./src/styles ./build/styles main.less",
-    "build": "lessc src/styles/main.less build/styles/main.css",
+    "build": "lessc ./src/styles ./build/styles main.less",
     "start": "vercel dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
