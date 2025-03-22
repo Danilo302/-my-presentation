@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p build/styles && lessc src/styles/main.less build/styles/main.css",
+    "build": "npx mkdirp build/styles && lessc src/styles/main.less build/styles/main.css",
     "start": "vercel dev"
   },
   "author": "",
@@ -11,6 +11,7 @@
   "description": "",
   "devDependencies": {
     "less": "^4.2.2",
-    "less-watch-compiler": "^1.16.3"
+    "less-watch-compiler": "^1.16.3",
+    "mkdirp": "^3.0.1"
   }
 }
