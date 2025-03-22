@@ -2,11 +2,27 @@
     "version": 2,
     "builds": [
         {
-            "src": "build/styles/main.css",
+            "src": "index.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "build/styles/*",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "src/images/*",
             "use": "@vercel/static"
         }
     ],
     "routes": [
+        {
+            "src": "/styles/(.*)",
+            "dest": "/build/styles/$1"
+        },
+        {
+            "src": "/images/(.*)",
+            "dest": "/src/images/$1"
+        },
         {
             "src": "/(.*)",
             "dest": "/index.html"
