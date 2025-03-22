@@ -1,27 +1,35 @@
 {
     "version": 2,
+    "public": "build",
     "builds": [
         {
             "src": "index.html",
             "use": "@vercel/static"
         },
         {
-            "src": "build/styles/*",
+            "src": "build/**/*",
             "use": "@vercel/static"
         },
         {
             "src": "src/images/*",
             "use": "@vercel/static"
+        },
+        {
+            "src": "src/styles/**/*.less",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "build/styles"
+            }
         }
     ],
     "routes": [
         {
             "src": "/styles/(.*)",
-            "dest": "/build/styles/*"
+            "dest": "/build/styles/$1"
         },
         {
             "src": "/images/(.*)",
-            "dest": "/src/images/*"
+            "dest": "/src/images/$1"
         },
         {
             "src": "/(.*)",
